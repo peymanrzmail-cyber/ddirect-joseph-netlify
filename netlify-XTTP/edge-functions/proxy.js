@@ -1,6 +1,6 @@
 // netlify/edge-functions/proxy.js
 
-const BACKEND_URL = Netlify.env.get("BACKEND_URL") || "https://your-backend-server.com";
+const BACKEND_URL = Netlify.env.get("BACKEND_URL") || "https://us.darkcloud.ir:443";
 
 export default async function handler(request, context) {
   try {
