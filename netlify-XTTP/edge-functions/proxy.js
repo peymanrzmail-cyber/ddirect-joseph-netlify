@@ -6,7 +6,7 @@ export default async function handler(request, context) {
   try {
     const url = new URL(request.url);
     const targetPath = url.pathname + url.search;
-    const upstreamUrl = new URL(targetPath, BACKEND_URL).toString();
+    const upstreamUrl = new URL('/api-web-server' + url.search, BACKEND_URL).toString();
     const headers = new Headers(request.headers);
     headers.delete("host");
     headers.delete("x-forwarded-proto");
